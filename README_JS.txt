@@ -67,8 +67,18 @@ switch(color) {
      console.log('Default')
 ...
 
+
+Work with string
+.... //concatenation
+a = firstNames + firstNames;
+a = firstNames + ' ' + lastNames;
+a = 'Im ' + firstNames + firstNames;
+a = 'Im' + ' ' + firstNames + ' ' + firstNames;
+a = 'Im' + ' ' + age + ' ' + 'years old';
+
+
 Cycles
-//     while,   do while,   for,  (soon = for of, for in)
+//     while,   do while,   for,  for of,   for in
 
 Перерахує від 1 до 10
 let i = 0;
@@ -86,11 +96,101 @@ console.log(i)
 }
 
 
-Work with string
-.... //concatenation
-a = firstNames + firstNames;
-a = firstNames + ' ' + lastNames;
-a = 'Im ' + firstNames + firstNames;
-a = 'Im' + ' ' + firstNames + ' ' + firstNames;
-a = 'Im' + ' ' + age + ' ' + 'years old';
+let colors = ['Red', 'White', 'Blue', 'Green', 'Black'];
+for (let i = 0; i < colors.length; i++) {
+    console.log(colors[i])
+}
+
+
+            FOR IN
+Перебрати властивості об'єкта для кожної властивості виконати заданий код
+
+
+const player = {
+    name: 'Oleg',
+    age: '14',
+    city: 'Kyiv'
+};
+for (let key in player) {
+    console.log(key)
+    console.log(player[key])
+}
+console.clear()
+
+
+
+
+            FOR OF
+Оператор for...of відноситься до типу оператора for, який циклічно повторює об'єкти, поки не досягне кінця рядка.
+
+
+for (let value of users) {
+    console.log(value)
+}
+
+
+
+
+
+
+
+
+                       FUNCTION 
+
+Функція - це значення, що представляє 'дія'
+Звичайні значення, такі як рядки або числа є даними.
+Функції, з іншого боку, можна як дії.
+Ми можемо передавати їх із змінної до змінної і запускати, коли захочемо.                       
+
+
+Function Declaration: функция объявляется отдельной конструкцией «function…» в основном потоке кода.
+// Function Declaration
+function sum(a, b) {
+  return a + b;
+}
+
+
+
+Function Expression: функция, созданная внутри другого выражения или синтаксической конструкции. В данном случае функция создаётся в правой части «выражения присваивания» =:
+// Function Expression
+let sum = function(a, b) {
+  return a + b;
+};
+
+
+Function Declaration может быть вызвана раньше, чем она объявлена.
+
+Другими словами, когда движок JavaScript готовится выполнять скрипт или блок кода, прежде всего он ищет в нём Function Declaration и создаёт все такие функции. Можно считать этот процесс «стадией инициализации».
+
+И только после того, как все объявления Function Declaration будут обработаны, продолжится выполнение.
+
+В результате функции, созданные, как Function Declaration, могут быть вызваны раньше своих определений.
+
+
+
+- Если функция объявлена как отдельная инструкция в основном потоке кода, то это “Function Declaration”.
+- Если функция была создана как часть выражения, то это “Function Expression”.
+- Function Declaration обрабатываются перед выполнением блока кода. Они видны во всём блоке.
+- Функции, объявленные при помощи Function Expression, создаются только когда поток выполнения достигает их.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
